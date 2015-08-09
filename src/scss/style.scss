@@ -1,0 +1,43 @@
+body{
+    background: #2F322D;
+}
+
+.page{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.collection{
+  .item{
+    padding: 2em 7em;
+    border: none;
+    transition:transform 300ms;
+  }
+
+  .item.selected, .item:hover{
+    transform :scale(1.2);
+    background-color: #2F322D;
+    border: 3px solid #2F322D;
+    color: #F5F5F5;
+  }
+}
+
+.rotateSlide.ng-leave { animation : rotateSlideOut 0.7s both ease-in}  // rotateSlideOut 1s // flipOutTop 0.5s // flipOut 0.4s
+.rotateSlide.ng-enter { animation : rotateSlideIn 0.7s both ease-in} // rotateSlideIn 1s   // flipInBottom 0.5s // flipIn 0.4s
+
+.flip.ng-leave { animation : flipOut 0.4s both ease-in}
+.flip.ng-enter { animation : flipIn 0.4s both ease-in}
+
+.opac.ng-leave { animation : opac 3s both ease-in}
+
+@keyframes opac {
+  0% {
+    opacity: 1;
+  }
+  100% {
+     opacity: 0;
+  }
+}

@@ -1,0 +1,56 @@
+body {
+  background: #2F322D; }
+
+.page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.collection .item {
+  padding: 2em 7em;
+  border: none;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms; }
+.collection .item.selected, .collection .item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #2F322D;
+  border: 3px solid #2F322D;
+  color: #F5F5F5; }
+
+.rotateSlide.ng-leave {
+  -webkit-animation: rotateSlideOut 0.7s both ease-in;
+          animation: rotateSlideOut 0.7s both ease-in; }
+
+.rotateSlide.ng-enter {
+  -webkit-animation: rotateSlideIn 0.7s both ease-in;
+          animation: rotateSlideIn 0.7s both ease-in; }
+
+.flip.ng-leave {
+  -webkit-animation: flipOut 0.4s both ease-in;
+          animation: flipOut 0.4s both ease-in; }
+
+.flip.ng-enter {
+  -webkit-animation: flipIn 0.4s both ease-in;
+          animation: flipIn 0.4s both ease-in; }
+
+.opac.ng-leave {
+  -webkit-animation: opac 3s both ease-in;
+          animation: opac 3s both ease-in; }
+
+@-webkit-keyframes opac {
+
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes opac {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }

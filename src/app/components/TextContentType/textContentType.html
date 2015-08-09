@@ -1,0 +1,32 @@
+<div class="window">
+
+  <header >
+    <nav class="nav-bar green inline">
+      <div class="container">
+        <div class="nav-header">Text Type</div>
+        <ul>
+          <li class="item-nav"><a href="#/">Application</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+   <section id="formTextContentType" class="content-page">
+     <div class="container">
+      <h1 class="center title-md">Share some Text</h1>
+      <form ng-submit="create()">
+        <div class="form-group">
+          <textarea ng-keyup="event=$event" class="form-control" ng-model="textContentType.Text"></textarea>
+        </div>
+        <button type="submit" class="btn center green ">Share !</button>
+      </form>
+    </div>
+  </section>
+
+   <section id="summaryContentType" class="content-page" ng-show="textContentType.Container">
+    <div class="container">
+      <p>Link : {{textContentType.Container.Link}} </p>
+    </div>
+   </section>
+
+</div>

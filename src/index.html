@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="partageApp">
+  <head>
+    <title>Partage AngularJs</title>
+    <meta charset="utf-8">
+    <meta name="description" content="A Share App with AngularJs">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css vendors.min.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles.min.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/letdoocss.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body ng-keyup="event=$event" ng-controller="PartageController">
+    <div class="perspective">
+      <div class="page" ng-class="transition" ng-view></div>
+    </div>
+    <!-- build:js vendors.min.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts.min.js -->
+    <!-- inject:js -->
+    <script src="app/app.js"></script>
+    <script src="app/common/directives/keyUp.js"></script>
+    <script src="app/common/services/ContentType.js"></script>
+    <script src="app/common/services/EventAction.js"></script>
+    <script src="app/common/services/test.js"></script>
+    <script src="app/components/TextContentType/textContentType.js"></script>
+    <script src="app/components/TodoContentType/todoContentType.js"></script>
+    <script src="app/components/home/home.js"></script>
+    <script src="app/components/test/testController.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>

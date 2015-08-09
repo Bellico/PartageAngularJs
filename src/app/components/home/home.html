@@ -1,0 +1,14 @@
+<div class="window green box-center"  ng-click="togglePanel(false)">
+  <div class="center">
+    <div class="title-extra" style="color:#2F322D">Partage App</div>
+    <a href="#/" class="icon-new radial-out" ng-click="togglePanel(true);$event.stopPropagation()"></a>
+    <!--<a ui-sref="create">Home</a>
+    <a ui-sref="we">we</a>
+    <div ui-view="homeView"></div> -->
+    <div class="modal" style="margin-top: 2em" ng-show="panelTypeShow">
+      <ul class="collection" ng-mousemove="mousemove()">
+        <li ng-repeat="type in listTypeEnable"><a ng-class="{selected: selected===type}" class="item" href="#/text">{{type}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
